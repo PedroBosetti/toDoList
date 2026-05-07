@@ -1,0 +1,4 @@
+1- Conexão com repositorio no github
+2- Iniciar projeto node com(npm init -y)
+3- Instalar dependências(express, cors, dotenv, bcrypt, jsonwebtoken, prisma, nodemon) e iniciar prisma(npx init prisma)
+4- criação da estrutura inicial MVC na pasta "SRC"
