@@ -2,3 +2,5 @@
 2- Iniciar projeto node com(npm init -y)
 3- Instalar dependências(express, cors, dotenv, bcrypt, jsonwebtoken, prisma, nodemon) e iniciar prisma(npx init prisma)
 4- criação da estrutura inicial MVC na pasta "SRC"
+5- Criação do arquivo "server.js" e configuração do server
+6- Configurção do express e nodemon no package.json(add "type": "module" + "scripts": {"dev": "nodemon src/server.js"} )
