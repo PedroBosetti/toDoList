@@ -1,8 +1,19 @@
 import express from 'express';
+import dotenv from 'dotenv/config';
+import prisma from "./lib/prisma.js"
+import conectar from './dataBase.js';
+
 const app = express()
-app.use(express.static('public'))
+app.use(express.json())
 
 
-app.listen(3000, () =>{
-    console.log(`Server rodando na porta 3000✅`)
-})
+async function iniciarServidor() {
+
+    await conectar()
+
+    app.listen(3000, () =>{
+        console.log(`Server rodando na porta 3000✅`)
+    })
+}
+
+iniciarServidor()
