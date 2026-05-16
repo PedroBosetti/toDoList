@@ -23,6 +23,8 @@ export async function registrar(req, res) {
     }
 }
 
+
+
 export async function login(req, res) {
     try {
         const { email, senha } = req.body
@@ -53,4 +55,27 @@ export async function login(req, res) {
     }
 }
 
+
+export async function perfil(req, res) {
+
+    try {
+
+        const usuario = await prisma.usuario.findUnique({
+            where: {
+                id: req.usuarioId
+            }
+        })
+
+        const { senha: _, ...usuarioSemSenha } = usuario
+
+        return res.status(200).json(usuarioSemSenha)
+
+    } catch (erro) {
+
+        return res.status(500).json({
+            erro: "Erro ao buscar perfil"
+        })
+
+    }
+}
 
