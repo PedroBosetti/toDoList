@@ -3,12 +3,14 @@ import dotenv from 'dotenv/config';
 import prisma from "./lib/prisma.js"
 import conectar from './dataBase.js';
 
-import authRoutes from "./routes/auth.js"
+import rotasUsuario from "./routes/auth.js"
+import rotaTarefas from "./routes/tarefas.js"
 
 const app = express()
 app.use(express.json())
 
-app.use("/auth", authRoutes)
+app.use("/auth", rotasUsuario)
+app.use("/tarefas", rotaTarefas)
 
 async function iniciarServidor() {
 
