@@ -6,6 +6,7 @@ const rotaUsuario = Router()
 
 rotaUsuario.post("/registro", registrar)
 rotaUsuario.post("/login", login)
+
 rotaUsuario.get("/perfil", auth, perfil)
 
 export default rotaUsuario

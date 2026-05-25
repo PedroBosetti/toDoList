@@ -31,6 +31,33 @@ export async function listarTarefas(req, res) {
     }
 }
 
+export async function listarTarefa(req, res) {
+    try {
+        const { id } = req.params
+        const tarefa = await prisma.tarefa.findUnique({
+            where: { id, usuarioId: req.usuarioId }
+        })
+
+        return res.status(200).json(tarefa)
+    } catch(erro) {
+        console.log(erro)
+        return res.status(500).json({ erro: "Erro ao listar tarefa"})
+    }
+}
+
+export async function listarTarefaPorStatus(req, res) {
+    const  { concluida } = req.query
+    try{
+        const tarefas = await prisma.tarefa.findMany({
+            where: { usuarioId: req.usuarioId, concluida: concluida === "true"}
+        })
+        return res.status(200).json(tarefas)
+    } catch(erro) {
+        console.log(erro)
+        return res.status(500).json("Erro ao listar tarefas")
+    }
+}
+
 
 
 export async function atualizarTarefa(req, res) {
