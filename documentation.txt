@@ -1,8 +1,17 @@
-1- Conexão com repositorio no github
-2- Iniciar projeto node com(terminal: npm init -y)
-3- Instalar dependências(express, cors, dotenv, bcrypt, jsonwebtoken, prisma, nodemon) e iniciar prisma(terminal: npx init prisma)
-4- criação da estrutura inicial MVC na pasta "SRC"
-5- Criação do arquivo "server.js" + configuração do server
-6- Configurção do express e nodemon no package.json(add "type": "module" + "scripts": {"dev": "nodemon src/server.js"} )
-7- Transição do "Prisma7" para o "Prisma6" + Conexão com banco de dados
-8- Criação da tabela "Usuario" e atualização no banco de dados(terminal: npx prisma migrate dev --name create-usuario-model)
+1- Conexão com repositório no GitHub
+2- Iniciar projeto Node com (terminal: npm init -y)
+3- Instalar dependências (express, cors, dotenv, bcrypt, jsonwebtoken, prisma, nodemon) e iniciar prisma (terminal: npx prisma init)
+4- Criação da estrutura inicial MVC na pasta "src"
+5- Criação do arquivo "server.js" + configuração do servidor
+6- Configuração do Express e nodemon no package.json (add "type": "module" + "scripts": {"dev": "nodemon src/server.js"})
+7- Transição do Prisma 7 para o Prisma 6 + Conexão com banco de dados
+8- Criação da tabela "Usuario" e atualização no banco de dados (terminal: npx prisma migrate dev --name create-usuario-model)
+9- Criação do controller de autenticação (registro, login e perfil)
+10- Criação do middleware de autenticação JWT
+11- Criação das rotas de autenticação
+12- Criação do model "Tarefa" e configuração da relação com "Usuario" (terminal: npx prisma migrate dev --name add-tarefa)
+13- Criação do controller de tarefas (criar, listar, listar por id, filtrar por status, atualizar, concluir e deletar)
+14- Criação das rotas de tarefas
+15- Adição dos scripts de produção no package.json (start e build)
+16- Deploy do backend no Render com banco de dados no Neon
+17- Criação do README
